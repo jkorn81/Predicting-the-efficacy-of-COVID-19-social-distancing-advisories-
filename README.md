@@ -5,18 +5,19 @@ This Github repository provides the materials needed to replicate the results re
 The Google.Report.Extraction folder contains two R scripts used to download and extract the data from the COVID-19 Community Mobility Report:
 
   1) The R script labeled “pdf.download” downloads the current COVID-19 Community Mobility Report .pdf files from the website and 
-     stores them on your machine in a directory labeled “/data”.
+     stores them on your machine in a directory labeled “/data”. A folder labeled "/data" must be created within the working 
+     directory. 
   2) The R script labeled “pdf.import” imports the pdf files, converts them into a list of texts, and then uses regular expressions to 
-     extract various data points from the texts to create the two generated xlsx files that are also saved in “/data”:  
+     extract various data points from the texts to create two generated .xlsx files that are also saved in “/data”:  
 
         - data.xlsx contains all countries and US states. 
         - data.us.xlsx is a subset of data.xlsx only including the US states. 
 
-The Merged.Data folder contains an R script label “merge.data” and a filed labeled “us.stats.xlsx”. The “us.stats.xlsx” contains the demographic data used in our study including the: average crime rate, Gini coefficient (income inequality), percentage of population female, percentage of population infected with COVID-19, percentage of population under 25, percentage of population with college degree, percentage of votes for republican gubernatorial candidates, overdose rate, population, poverty rate, smoking rate, suicide rate, and the teen pregnancy rate. 
+The Merged.Data folder contains an R script label “merge.data” and two excel file labeled “us.stats.xlsx”, and "FinalData.xlsx". The “us.stats.xlsx” contains the demographic data used in our study including the: average crime rate, Gini coefficient (income inequality), percentage of population female, percentage of population infected with COVID-19, percentage of population under 25, percentage of population with college degree, percentage of votes for republican gubernatorial candidates, overdose rate, population, poverty rate, smoking rate, suicide rate, and the teen pregnancy rate. 
               
-The R script labeled “merge.data” merges the downloaded COVID-19 Community Mobility Report data in “/data/data.us.xlsx” with the “us.stats.xlsx” and saves it as Final.Data.xlsx. To add additional variables to the data add an additional merge() function to merge FinalData.xlsx with any data sharing a foreign key. For instance, to merge the FinalData.xlsx with another dataset the following syntax is required: merge(FinalData, "new_data", by = "location"). Note that the by = "" can be any foriegn key that matches between the datasets. For this project 'location' is used as the foreign key variable. 
+The R script labeled “merge.data” merges the downloaded COVID-19 Community Mobility Report data in “/data/data.us.xlsx” with the “us.stats.xlsx” and saves it as "FinalData.xlsx". 
 
-The Modeling folder contains an R script labeled “Final_Code.r” to conduct a Random Forest (RF) to extract the most important predictors and plot the results and run an OLS regression using the three most predictive variables found in the RF results using the “FinalData.xlsx”..
+The Modeling folder contains three R scripts labeled “model_study.r”, "new.data.r", and "model_new.r" to conduct a Random Forest (RF) to extract the most important predictors and plot the results and run an OLS regression using the three most predictive variables found in the RF results. Running the R script "model.study.r" performs the above operations/analyses on the “FinalData.xlsx”. The R script labeled “model_new.r” performs the above operations/analyses on the “NewData.xlsx” data generated using the script labeled "new.data.r".
 
 The R script labeled “Final_Code.r” performs the above operations/analyses on the “FinalData.xlsx”.
 
