@@ -19,6 +19,6 @@ The R script labeled “merge.data” merges the downloaded COVID-19 Community M
 
 The Modeling folder contains three R scripts labeled “model_study.r”, "new.data.r", and "model_new.r" to conduct a Random Forest (RF) to extract the most important predictors and plot the results and run an OLS regression using the three most predictive variables found in the RF results. 
 
-The R script "model.study.r" performs the above operations/analyses on the “FinalData.xlsx”. The R script labeled “model_new.r” performs the above operations/analyses on the “NewData.xlsx” data generated using the script labeled "new.data.r". Running the "new.data.r" script will complete the same tasks as the original "merge.data.r" stored in the Merge.Data folder, but label the dataframe differently than the study. 
+The R script "model.study.r" performs the above operations/analyses on the “FinalData.xlsx”. The R script labeled “model_new.r” performs the above operations/analyses on the “NewData.xlsx” data generated using the script labeled "new.data.r". Running the "new.data.r" script will complete the same tasks as the original "merge.data.r" stored in the Merge.Data folder.
 
 
