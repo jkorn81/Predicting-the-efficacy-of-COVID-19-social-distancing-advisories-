@@ -16,7 +16,7 @@ The Merged.Data folder contains an R script label “merge.data” and a filed l
               
 The R script labeled “merge.data” merges the downloaded COVID-19 Community Mobility Report data in “/data/data.us.xlsx” with the “us.stats.xlsx” and saves it as Final.Data.xlsx. To add additional variables to the data add an additional merge() function to merge FinalData.xlsx with any data sharing a foreign key. For instance, to merge the FinalData.xlsx with another dataset the following syntax is required: merge(FinalData, "new_data", by = "location"). Note that the by = "" can be any foriegn key that matches between the datasets. For this project 'location' is used as the foreign key variable. 
 
-The Modeling folder contains an R script labeled “Final_Code.r” to conduct a Random Forest (RF) to extract the most important predictors and plot the results and run an OLS regression using the three most predictive variables found in the RF on the “FinalData.xlsx”..
+The Modeling folder contains an R script labeled “Final_Code.r” to conduct a Random Forest (RF) to extract the most important predictors and plot the results and run an OLS regression using the three most predictive variables found in the RF results using the “FinalData.xlsx”..
 
 The R script labeled “Final_Code.r” performs the above operations/analyses on the “FinalData.xlsx”.
 
