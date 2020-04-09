@@ -4,11 +4,11 @@ This Github repository provides materials needed to replicate the results report
 
 Note(s): 
 
-      * To replicate the original results skip to section (3a) for more details. Essentially, you clone the Github, and run 
-        "model.study.r". The R script will execute the study's operations/analysis on the the dataset used in the study labeled  
-        "FinalData.xlsx" located in the Merged.Data folder. 
-      * To extend on the work with newly updated start at section (1) to download and pre-process the Google COVID-19 reports. This is 
-        required only if you are extending the work. Replicating the study does not require any steps in section (1) to be performed. 
+   * To replicate the original results skip to section (3a) for more details. Essentially, you clone the Github, and run 
+     "model.study.r". The R script will execute the study's operations/analysis on the the dataset used in the study labeled  
+     "FinalData.xlsx" located in the Merged.Data folder. 
+   * To extend on the work with newly updated start at section (1) to download and pre-process the Google COVID-19 reports. This is 
+     required only if you are extending the work. Replicating the study does not require any steps in section (1) to be performed. 
 
 (1) The Google.Report.Extraction folder contains two R scripts used to download and extract the data from the COVID-19 Community 
     Mobility Report. The original /.pdf files are not stored on the Github repository and require the two following R scripts to 
@@ -26,7 +26,7 @@ Note(s):
 
 Note(s): 
 
-      - Section (2) details the process for merging the data utilized for the study. Do not run.  
+   - Section (2) details the process for merging the data utilized for the study. Do not run.  
 
 (2) The Merged.Data folder contains an R script label “merge.data” and two excel files labeled “us.stats.xlsx”, and "FinalData.xlsx". 
     Note, the "merge.data.r" file is a copy of the study's merge script. Do not run.  
