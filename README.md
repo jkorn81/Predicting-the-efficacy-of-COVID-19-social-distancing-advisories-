@@ -1,11 +1,17 @@
 # Predicting-the-efficacy-of-COVID-19-social-distancing-advisories-
 
-The first dataset is collected from Google's Community Mobiltiy Reports at https://www.google.com/covid19/mobility/. The Github contains three main folders labeled Google.Report.Extraction, Merged.Data, Modeling. Google.Report.Extraction folder contains folders labeled code, data, and two generated xlsx files containing the extracted data from Google's reports. Within the code folder is two R scripts to conduct two tasks. The first is completed by the R script labeled pdf.download, which downloads the current Google Community Mobility Reports pdf files from the website and stores them in your local machine in a directory labeled /data. The second task is completed by the R script labeled pdf.import which imports the pdf files, converts them into a list of texts, and then uses regular expressions to extract various data points from the texts to create the two generated xlsx files labeled data.xlsx and data.us.xlsx. 
+This Github repository provides the materials needed to replicate the results reported in, “Predicting the efficacy of COVID-19 social distancing advisories”. It also provides the flexibility to extend them by adding additional variables of interest and by updating the data from Google’s COVID-19 Community Mobility Report – which can be found at https://www.google.com/covid19/mobility/. There are three main folders: Google.Report.Extraction, Merged.Data, and Modeling.
+The Google.Report.Extraction folder contains two R scripts used to download and extract the data from the COVID-19 Community Mobility Report:
+
+  1) The R script labeled “pdf.download” downloads the current COVID-19 Community Mobility Report .pdf files from the website and 
+     stores them on your machine in a directory labeled “/data”.
+  2) The R script labeled “pdf.import” imports the pdf files, converts them into a list of texts, and then uses regular expressions to 
+     extract various data points from the texts to create the two generated xlsx files that are also saved in “/data”:  
 
         - data.xlsx contains all countries and US states. 
         - data.us.xlsx is a subset of data.xlsx only including the US states. 
 
-The final dataset is created by merging data.us.xlsx with various other US reports including the CDC, FBI, etc. Merged.Data folder contains an xlsx file labeled FinalData.xlsx (the merged data), an xlsx file of US stats labeled us.stats.xlsx, and a R script labeled merge.data to merge the Google COVID-19 report data with US stats data. Measures include smoking rate, percentage of population infected with COVID-19, percentage of population under 25, percentage of population with college degree, poverty rate, teen pregenancy rate, average crime rate, percentage of votes for republican gubernatorial candidates, suicide rate, overdose rate, population, Gini coeeficient (income inequality), and percentage of poulation female. Sources of the various measures include:
+The Merged.Data folder contains an R script label “merge.data” and a filed labeled “us.stats.xlsx”. The “us.stats.xlsx” contains the demographic data used in our study including the: average crime rate, Gini coefficient (income inequality), percentage of population female, percentage of population infected with COVID-19, percentage of population under 25, percentage of population with college degree, percentage of votes for republican gubernatorial candidates, overdose rate, population, poverty rate, smoking rate, suicide rate, and the teen pregnancy rate. Sources of the various measures include:
 
         - 1. Coronavirus Disease 2019 (COVID-19) in the U.S. [Internet]. Centers for Disease Control and Prevention. 2020 [cited 5 
              April 2020]. Available from: https://www.cdc.gov/coronavirus/2019-ncov/cases-updates/cases-in-us.html
@@ -34,5 +40,10 @@ The final dataset is created by merging data.us.xlsx with various other US repor
               total.html#par_textimage_1574439295
         - 12. Data Center: US Data – Population Reference Bureau [Internet]. Prb.org. 2020 [cited 5 April 2020]. Available from: 
               https://www.prb.org/usdata/indicator/gini/table
+              
+The R script labeled “merge.data” merges the downloaded COVID-19 Community Mobility Report data in “/data/data.us.xlsx” with the “us.stats.xlsx” and saves it as Final.Data.xlsx. To add additional variables to the data add an additional merge() function to merge FinalData.xlsx with any data sharing a foriegn key. 
 
-Modeling contains a folder labeled code containing R scripts to perform OLS and Random Forest on the final dataset and recreate the results from the study. 
+The Modeling folder contains a data set labeled “FinalData.xlsx” which is the complete data set used in our study and two R scripts to conduct a Random Forest (RF) to extract the most important predictors and plot the results and run an OLS regression using the three most predictive variables found in the RF.
+
+The R script labeled “xxxx” performs the above operations/analyses on the “FinalData.xlsx”.
+
