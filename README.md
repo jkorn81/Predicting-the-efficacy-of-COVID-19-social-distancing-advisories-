@@ -22,9 +22,11 @@ Note: To replicate original results skip to section (4). Clone the Github and ru
         - data.us.xlsx is a subset of data.xlsx only including the US states. 
 
 (3) The Merged.Data folder contains an R script label “merge.data” and two excel files labeled “us.stats.xlsx”, and "FinalData.xlsx". 
+    Note, the "merge.data.r" file is a copy of the study's merge script. Do not run.  
     
-   a) The R script labeled “merge.data.r” is a study material, used to merge the downloaded COVID-19 Community Mobility Report data in       “/data/data.us.xlsx” with the “us.stats.xlsx” and saves it as "FinalData.xlsx". To create a updated merged dataset refer to the 
-      Modeling folder detailed in section (4). 
+   a) The R script labeled “merge.data.r” is a study material, used to merge the downloaded COVID-19 Community Mobility Report data in       “/data/data.us.xlsx” with the “us.stats.xlsx” and saved it as "FinalData.xlsx". To create a updated merged dataset with 
+      "us.stats.xlsx" refer to the Modeling folder detailed in section (4). In section (4) a new script is provided to store a new file 
+      labeled "NewData.xlsx". 
    
    b) The “us.stats.xlsx” contains the demographic data used in our study including the: average crime rate, Gini coefficient (income 
       inequality), percentage of population female, percentage of population infected with COVID-19, percentage of population under 25, 
@@ -35,11 +37,12 @@ Note: To replicate original results skip to section (4). Clone the Github and ru
      Forest (RF) to extract the most important predictors and plot the results and run an OLS regression using the three most
      predictive variables found in the RF results. 
       
-     a) The R script "model.study.r" performs the above operations/analyses on the “FinalData.xlsx” created by the merge.data.r" script 
-        stored in the Merged.Data folder. 
+   a) The R script "model.study.r" performs the above operations/analyses on the “FinalData.xlsx” created by the merge.data.r" script 
+      stored in the Merged.Data folder. DO not run unless to replicate original modeling. 
      
-     b) For extending the work on teh study with new data use the R script labeled “model_new.r" performs the above operations/analyses 
-        on the “NewData.xlsx” file generated using the script labeled "new.data.r". Running the "new.data.r" script will complete the 
-        same tasks as the "merge.data.r" script stored in the Merge.Data folder, but create the a file labeled "NewData.xlsx".
+   b) For extending the work on the study with new data use the R script labeled “model_new.r" which performs the above 
+      operations/analyses on the “NewData.xlsx” file generated using the script labeled "new.data.r". Running the "new.data.r" script 
+      will complete the same tasks as the "merge.data.r" script stored in the Merge.Data folder, but create the a file labeled 
+      "NewData.xlsx" for extended work.
 
 
