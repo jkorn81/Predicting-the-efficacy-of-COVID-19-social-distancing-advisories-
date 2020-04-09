@@ -38,7 +38,7 @@ Note: To replicate original results skip to section (4). Clone the Github and ru
      predictive variables found in the RF results. 
       
    a) The R script "model.study.r" performs the above operations/analyses on the “FinalData.xlsx” created by the merge.data.r" script 
-      stored in the Merged.Data folder. DO not run unless to replicate original modeling. 
+      stored in the Merged.Data folder. Do not run unless to replicate original modeling. 
      
    b) For extending the work on the study with new data use the R script labeled “model_new.r" which performs the above 
       operations/analyses on the “NewData.xlsx” file generated using the script labeled "new.data.r". Running the "new.data.r" script 
