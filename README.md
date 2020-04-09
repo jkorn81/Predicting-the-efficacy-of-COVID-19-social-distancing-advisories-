@@ -21,8 +21,9 @@ Note(s):
    b) Next run, the R script labeled “pdf.import” to import the pdf files into your local enviroment. Once imported the pdf files
       converts them into a list of texts, and then uses regular expressions to extract various data points from the texts to create two 
       generated .xlsx files that are also saved in “/data”:  
-        - data.xlsx contains all countries and US states. 
-        - data.us.xlsx is a subset of data.xlsx only including the US states. 
+       
+   - data.xlsx contains all countries and US states. 
+   - data.us.xlsx is a subset of data.xlsx only including the US states. 
 
 Note(s): 
 
