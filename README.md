@@ -43,7 +43,7 @@ This Github repository provides materials needed to replicate the results report
 
 **Note(s) for Section 3:**
 
-    - Section (3) details the process for replicating the model from the study (3a) and also provides resources to extend on the work         (3b).   
+   - Section (3) details the process for replicating the model from the study (3a) and also provides resources to extend on the work        (3b).   
 
  (3) The Modeling folder contains three R scripts labeled “model_study.r”, "new.data.r", and "model_new.r". The main purpose of section 
      (3) is to conduct a Random Forest (RF) to extract the most important predictors, plot the results, and run an OLS regression using      the three most predictive variables found in the RF results. 
