@@ -4,9 +4,8 @@ This Github repository provides materials needed to replicate the results report
 
 **Note(s) for Section (1):** 
 
-   * To replicate the original results skip to section (3a) for more details. Essentially, you clone the Github, and run 
-     "model.study.r". The R script will execute the study's operations/analysis on the the dataset used in the study labeled  
-     "FinalData.xlsx" located in the Merged.Data folder. 
+   * To replicate the original results skip to section (3a) for more details. The R script will execute the study's operations/analysis 
+     on the the dataset used in the study labeled "FinalData.xlsx" located in the Merged.Data folder. 
    * To extend on the work with newly updated start at section (1) to download and pre-process the Google COVID-19 reports. This is 
      required only if you are extending the work. Replicating the study does not require any steps in section (1) to be performed. 
 
