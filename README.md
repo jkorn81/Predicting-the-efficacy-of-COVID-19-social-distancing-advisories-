@@ -54,10 +54,17 @@ This Github repository provides materials needed to replicate the results report
      
    **b)** Extending the Work:
    
-   - For extending the work on the study with new data use the R script labeled “model_new.r" which performs the above 
-     operations/analyses on the “NewData.xlsx”. 
+   - To generate "NewData.xlsx", run the "new.data.r" script to merge the updated "data.us.xlsx" from completing section (1) 
+     and the "us.stats.xlsx" dataset located in the Merged.Data folder. The script will store and label the resulting dataframe 
+     "NewData.xlsx". Add dataframes by including additional syntax to "new_data.r" to import/merge datasets that have the same foreign 
+     keys as "data.us.xlsx" and "us.stats.xlsx". A foreign key is a variable that matches other datasets. The variables need to match 
+     header names and the unique values of the vairbales need to match. For instance, in the study the dataset "data.us.xlsx" and 
+     "us.stats.xlsx" were mereged using the variable "location", which both contained as the names of the US states. 
+   
+   - For extending the work on the study with the "NewData.xlsx" use the R script labeled “model_new.r" which performs the above 
+     operations/analyses on the “NewData.xlsx”, the same as in the study using "model.study.r". 
+     
         
-   - To generate "NewData.xlsx", run the "new.data.r" script to merge the updated "data.us.xlsx" from running through section (1) 
-     and the "us.stats.xlsx" dataset located in the Merged.Data folder. Label the resulting dataframe "NewData.xlsx" for modeling using      the "model_new.r" script. .
+
 
 
