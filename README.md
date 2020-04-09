@@ -17,7 +17,9 @@ The Merged.Data folder contains an R script label “merge.data” and two excel
               
 The R script labeled “merge.data” merges the downloaded COVID-19 Community Mobility Report data in “/data/data.us.xlsx” with the “us.stats.xlsx” and saves it as "FinalData.xlsx". 
 
-The Modeling folder contains three R scripts labeled “model_study.r”, "new.data.r", and "model_new.r" to conduct a Random Forest (RF) to extract the most important predictors and plot the results and run an OLS regression using the three most predictive variables found in the RF results. Running the R script "model.study.r" performs the above operations/analyses on the “FinalData.xlsx”. The R script labeled “model_new.r” performs the above operations/analyses on the “NewData.xlsx” data generated using the script labeled "new.data.r".
+The Modeling folder contains three R scripts labeled “model_study.r”, "new.data.r", and "model_new.r" to conduct a Random Forest (RF) to extract the most important predictors and plot the results and run an OLS regression using the three most predictive variables found in the RF results. 
 
-The R script labeled “Final_Code.r” performs the above operations/analyses on the “FinalData.xlsx”.
+The R script "model.study.r" performs the above operations/analyses on the “FinalData.xlsx”. The R script labeled “model_new.r” performs the above operations/analyses on the “NewData.xlsx” data generated using the script labeled "new.data.r". Running the "new.data.r" script will complete the same tasks as the original "merge.data.r" stored in the Merge.Data folder providing updated data. 
+
+
 
