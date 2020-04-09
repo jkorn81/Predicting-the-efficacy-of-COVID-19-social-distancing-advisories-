@@ -73,10 +73,10 @@ data = data.frame(meta$doc_id, location, retail, grocery, national.park, transpo
 colnames(data) = c("doc.id", "location", "retail", "grocery", "national.park", "transport", "work", "residence", "text")
 str(data)
 library(xlsx)
-write.xlsx(data, "data.xlsx")
+write.xlsx(data, "data/data.xlsx")
 
 #subset US Data ...
 data.us = data[stringi::stri_detect_fixed(data$location, "US"), ]
 data.us = data.frame(data.us)
 str(data.us)
-write.xlsx(data.us, "data.us.xlsx")
+write.xlsx(data.us, "data/data.us.xlsx")
