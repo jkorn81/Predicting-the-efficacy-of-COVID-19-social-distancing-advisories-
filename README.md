@@ -2,7 +2,7 @@
 
 This Github repository provides materials needed to replicate the results reported in, “Predicting the efficacy of COVID-19 social distancing advisories”. It also provides the flexibility to extend them by adding additional variables of interest and by updating the data from Google’s COVID-19 Community Mobility Report – which can be found at https://www.google.com/covid19/mobility/. There are three main folders: Google.Report.Extraction, Merged.Data, and Modeling.
 
-Note(s): 
+**Note(s) for Section (1):** 
 
    * To replicate the original results skip to section (3a) for more details. Essentially, you clone the Github, and run 
      "model.study.r". The R script will execute the study's operations/analysis on the the dataset used in the study labeled  
@@ -25,7 +25,7 @@ Note(s):
        - data.xlsx contains all countries and US states. 
        - data.us.xlsx is a subset of data.xlsx only including the US states. 
 
-Note(s): 
+**Note(s) for Section (2):** 
 
    - Section (2) details the process for merging the data utilized for the study. Do not run.  
 
@@ -41,7 +41,7 @@ Note(s):
    percentage of population with college degree, percentage of votes for republican gubernatorial candidates, overdose rate, 
    population, poverty rate, smoking rate, suicide rate, and the teen pregnancy rate. 
 
-Note(s): 
+**Note(s) for Section 3:**
 
     - Section (3) details the process for replicating the model from the study (3a) and also provides resources to extend on the work         (3b).   
 
