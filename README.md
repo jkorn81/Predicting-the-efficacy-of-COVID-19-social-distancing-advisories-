@@ -3,6 +3,7 @@
 This Github repository provides materials needed to replicate the results reported in, “Predicting the efficacy of COVID-19 social distancing advisories”. It also provides the flexibility to extend them by adding additional variables of interest and by updating the data from Google’s COVID-19 Community Mobility Report – which can be found at https://www.google.com/covid19/mobility/. There are three main folders: Google.Report.Extraction, Merged.Data, and Modeling.
 
 Note(s): 
+
       - To replicate the original results skip to section (3a) for more details. Essentially, you clone the Github, and run 
         "model.study.r". The R script will execute the study's operations/analysis on the the dataset used in the study labeled  
         "FinalData.xlsx" located in the Merged.Data folder. 
@@ -24,6 +25,7 @@ Note(s):
         - data.us.xlsx is a subset of data.xlsx only including the US states. 
 
 Note(s): 
+
       - Section (2) details the process for merging the data utilized for the study. Do not run.  
 
 (2) The Merged.Data folder contains an R script label “merge.data” and two excel files labeled “us.stats.xlsx”, and "FinalData.xlsx". 
@@ -39,6 +41,7 @@ Note(s):
       population, poverty rate, smoking rate, suicide rate, and the teen pregnancy rate. 
 
 Note(s): 
+
       - Section (3) details the process for replicating the model from the study and also provides resources to extend on the work.   
 
  (3) The Modeling folder contains three R scripts labeled “model_study.r”, "new.data.r", and "model_new.r" to conduct a Random 
@@ -46,10 +49,12 @@ Note(s):
      predictive variables found in the RF results. 
       
    a) Replicating the Study:
+   
       - The R script "model.study.r" performs the above operations/analyses on the “FinalData.xlsx” created by the merge.data.r" script 
         stored in the Merged.Data folder. Do not run unless to replicate original modeling. 
      
    b) Extending the Work:
+   
       - For extending the work on the study with new data use the R script labeled “model_new.r" which performs the above 
         operations/analyses on the “NewData.xlsx” file generated using the script labeled "new.data.r". Running the "new.data.r" script 
         will complete the same tasks as the "merge.data.r" script stored in the Merge.Data folder, but create the a file labeled 
