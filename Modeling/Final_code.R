@@ -8,7 +8,10 @@ library(dplyr)
 stuff <- read_excel("Merged.Data/FinalData.xlsx")
 str(stuff)
 stuff1 = stuff[,-c(1,2,16,18:20,22,23)]
-stuff1 = na.omit(stuff1)
+stuff1 = cbind(state= c("AL","AK","AZ","AR","CA","CO","CT","DE","DC","FL","GA","HI","ID","IL",
+                        "IN","IA","KS","KY","LA","ME","MD","MA","MI","MN","MS","MO","MT","NE",
+                        "NV","NH","NJ","NM","NY","NC","ND","OH","OK","OR","PA","RI","SC","SD",
+                        "TN","TX","UT","VT","VA","WA","WV","WI","WY"), stuff1)
 str(stuff1)
 
 
@@ -16,9 +19,9 @@ str(stuff1)
 model <- lm(retail ~ ., data = stuff1 )
 summary(model)
 
-X <- stuff1[,-c(14)]
-y_predict = predict(model, X )
-y= stuff1$retail
+#X <- stuff1[,-c(14)]
+#y_predict = predict(model, X )
+#y= stuff1$retail
 
 # - [4] - Plot Retail Rate of Movement Map ---- 
 plotmaps <- function(stuff, value) {
@@ -30,12 +33,14 @@ plotmaps <- function(stuff, value) {
   print(p.plot)
 }
 
-aa = "retail"
-plotmaps(stuff_new, aa)
+variable = "retail"
+plotmaps(stuff_new, variable)
 
 # - [5] - Random Forest Modeling ----
-y = stuff1$retail
-X = stuff1[,-c(14)]
+stuff2 <- stuff1[-c(9),] 
+stuff2 <- stuff2[,-c(1)] 
+y = stuff2$retail
+X = stuff2[,-c(17)]
 rf <- randomForest(retail ~ .   , data= stuff1 , ntree=800)
 y_predict <- predict(rf, X)
 mean( (y - y_predict)^2)
