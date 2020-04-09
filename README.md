@@ -5,9 +5,8 @@ This Github repository provides materials needed to replicate the results report
 **Note(s) for Section (1):** 
 
    * To replicate the original results skip to section (3a) for more details. The R script will execute the study's operations/analysis 
-     on the the dataset used in the study labeled "FinalData.xlsx" located in the Merged.Data folder. 
-   * To extend on the work with newly updated start at section (1) to download and pre-process the Google COVID-19 reports. This is 
-     required only if you are extending the work. Replicating the study does not require any steps in section (1) to be performed. 
+     on the the dataset used in the study labeled "FinalData.xlsx", located in the Merged.Data folder. 
+   * To extend on the work with newly updated data start at section (1) to download and pre-process the Google COVID-19 reports. This        is required only if you are extending the work. Replicating the study does not require any steps in section (1) to be performed. 
 
 **(1)** The Google.Report.Extraction folder contains two R scripts used to download and extract the data from the COVID-19 Community 
     Mobility Report. The original /.pdf files are not stored on the Github repository and require the two following R scripts to 
@@ -59,6 +58,6 @@ This Github repository provides materials needed to replicate the results report
      operations/analyses on the “NewData.xlsx”. 
         
    - To generate "NewData.xlsx", run the "new.data.r" script to merge the updated "data.us.xlsx" from running through section (1) 
-     and the "us.stats.xlsx". Label the resulting dataframe "NewData.xlsx" for modeling using the "model_new.r" script. .
+     and the "us.stats.xlsx" dataset located in the Merged.Data folder. Label the resulting dataframe "NewData.xlsx" for modeling using      the "model_new.r" script. .
 
 
