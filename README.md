@@ -58,7 +58,7 @@ This Github repository provides materials needed to replicate the results report
      and the "us.stats.xlsx" dataset located in the Merged.Data folder. The script will store and label the resulting dataframe 
      "NewData.xlsx". Add dataframes by including additional syntax to "new_data.r" to import/merge datasets that have the same foreign 
      keys as "data.us.xlsx" and "us.stats.xlsx". A foreign key is a variable that matches other datasets. The variables need to match 
-     header names and the unique values of the vairbales need to match. For instance, in the study the dataset "data.us.xlsx" and 
+     header names and the unique values of the variables need to match. For instance, in the study the dataset "data.us.xlsx" and 
      "us.stats.xlsx" were mereged using the variable "location", which both contained as the names of the US states. 
    
    - For extending the work on the study with the "NewData.xlsx" use the R script labeled “model_new.r" which performs the above 
